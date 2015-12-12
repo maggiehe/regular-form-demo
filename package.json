@@ -1,0 +1,25 @@
+{
+  "name": "regular-form-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maggiehe/regular-form-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maggiehe/regular-form-demo/issues"
+  },
+  "homepage": "https://github.com/maggiehe/regular-form-demo#readme",
+  "dependencies": {
+    "regular-form": "git+https://github.com/amibug/regular-form.git",
+    "regularjs": "^0.4.3",
+    "requirejs": "^2.1.22",
+    "text": "requirejs/text"
+  }
+}
