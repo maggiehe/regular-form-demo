@@ -16,7 +16,8 @@
      <div class="form-group">
         <label class="col-sm-2 control-label">simple component</label>
         <div class="col-sm-5">
-        <simple name='field2' val={value2} r-model={value2} r-required="required"></simple>
+            <input type="hidden" name='field2' r-model={value2} r-required="required">
+            <simple val={value2}></simple>    
         </div>
     </div>
     <div class="form-group text-danger">
