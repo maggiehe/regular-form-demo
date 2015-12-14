@@ -1,5 +1,4 @@
 <form class="form-horizontal">
-    
     <div class="form-group">
         <label class="col-sm-2 control-label">input</label>
         <div class="col-sm-5">
@@ -12,16 +11,11 @@
             <p r-hide={!form.$$field1.$error.pattern}>只能输入字母和数字</p>
         </div>
     </div>
-
-     <div class="form-group">
-        <label class="col-sm-2 control-label">simple component</label>
-        <div class="col-sm-5">
-        <simple name='field2' val={value2} r-model={value2} r-required="required"></simple>
-        </div>
-    </div>
-    <div class="form-group text-danger">
+    <simple val={value2} name="field2"></simple>      
+    <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-            <p r-hide={!form.$$field2.$error.required}>字段必填</p>
-        </div>
+            {#if $invalid}disabled{/if}
+            <button type="submit" class="btn btn-primary" {#if $invalid}disabled="disabled"{/if}>提交</button>
+        </div>  
     </div>
 </form>
