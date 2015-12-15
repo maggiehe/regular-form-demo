@@ -17,9 +17,12 @@
   },
   "homepage": "https://github.com/maggiehe/regular-form-demo#readme",
   "dependencies": {
-    "regular-form": "git+https://github.com/amibug/regular-form.git",
+    "regular-form": "^0.1.0",
     "regularjs": "^0.4.3",
     "requirejs": "^2.1.22",
     "text": "requirejs/text"
+  },
+  "devDependencies": {
+    "regular-ui": "^0.1.6"
   }
 }
