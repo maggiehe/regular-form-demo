@@ -1,0 +1,12 @@
+<label class="u-input2 ">
+    <div class="u-dropdown u-datepicker {class}" z-dis={disabled} r-hide={!visible} ref="element" on-blur={this.toggle(false)}>
+        <div class="dropdown_hd">
+            <input class="u-input u-input-full" placeholder={placeholder}  name="date" r-model={date} r-required="true"  value={date} ref="input" autofocus={autofocus} readonly={readonly} disabled={disabled}
+            on-focus={this.toggle(true)} on-change={this._onInput($event)}>
+        </div>
+        <div class="dropdown_bd" r-show={open} r-animation="on: enter; class: animated fadeInY fast; on: leave; class: animated fadeOutY fast;">
+            <calendar date={_date} minDate={minDate} maxDate={maxDate} on-select={this.select($event.date)} />
+        </div>
+    </div>
+</label>
+<span class="u-tip u-tip-error" r-hide={!form.$$date.$error.required}>请选择{@(label)}</span>

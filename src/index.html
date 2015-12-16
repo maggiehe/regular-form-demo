@@ -1,19 +1,152 @@
 <!doctype html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="desc">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>regular form demo</title>
-    <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/base.css" />
+    <title>Regular Form</title>
+    <link rel="stylesheet" href="./css/default.min.css">
+    <link rel="stylesheet" href="css/base.css"/>
 </head>
+<body data-feedly-mini="yes">
+<div class="g-top">
+    <div class="g-topc">
+        <a class="m-logo" href="http://regular-ui.github.io/index.html"><img
+                src="http://regular-ui.github.io/img/logo-v1.0-long-48.png"></a>
+        <ul class="m-navbar f-fr">
+            <li><a href="http://regular-ui.github.io/start/quickstart.html">开始使用</a></li>
+            <li><a href="http://regular-ui.github.io/cssunit/index.html">CSS元件</a></li>
+            <li><a href="http://regular-ui.github.io/cssmodule/index.html">CSS模块</a></li>
+            <li><a href="http://regular-ui.github.io/jsunit/index.html">JS元件</a></li>
+            <li><a href="http://regular-ui.github.io/jsmodule/index.html">JS模块</a></li>
+        </ul>
+    </div>
+</div>
+<div class="g-bd">
+    <div class="g-bdc">
+        <div class="g-mn">
+            <article class="m-article">
+                <h2>表单验证
+                    <small> Validation</small>
+                </h2>
+                <h3 id="-">示例</h3>
+                <h4 id="-">基本形式</h4>
+                <div class="m-example"></div>
 
-<body>
-    <div id='box'></div>
-    <script src="/node_modules/requirejs/require.js" data-main="javascript/index.js"></script>
+                <h3>API</h3>
+
+                <h4>Class</h4>
+                <h5>Validation</h5>
+
+                <p>继承自<strong>Component</strong>。</p>
+
+                <p></p>
+
+                <div id="j-class"></div>
+
+                <h4>Options</h4>
+                <h5>new Validation()</h5>
+                <table>
+                    <thead>
+                    <tr>
+                        <th width="24%">参数</th>
+                        <th width="16%">类型</th>
+                        <th width="16%">默认值</th>
+                        <th width="18%">数据流向</th>
+                        <th width="26%">描述</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+
+                    <tr>
+                        <td class="f-wsn"><code>data</code></td>
+                        <td class="f-wsn">object</td>
+                        <td class="f-wsn"></td>
+                        <td class="f-tac"></td>
+                        <td>绑定属性</td>
+                    </tr>
+
+                    <tr>
+                        <td class="f-wsn"><code>data.disabled</code></td>
+                        <td class="f-wsn">boolean</td>
+                        <td class="f-wsn"><code>false</code></td>
+                        <td class="f-tac">outer =&gt; inner</td>
+                        <td>是否禁用。当禁用时验证始终通过。</td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+                <div id="j-options"></div>
+
+
+                <h4>Methods</h4>
+
+
+                <h5>
+
+                    <div>validation.validate()</div>
+                </h5>
+                <p>验证所有表单组件</p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th width="25%">参数</th>
+                        <th width="25%">类型</th>
+                        <th width="25%">默认值</th>
+                        <th width="25%">描述</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td class="f-tac" colspan="4">无参数</td>
+                    </tr>
+
+                    </tbody>
+                    <thead>
+                    <tr>
+                        <th width="25%">返回值</th>
+                        <th width="25%">类型</th>
+                        <th width="50%" colspan="2">描述</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td class="f-wsn"><code>conclusion</code></td>
+                        <td class="f-wsn">object</td>
+                        <td colspan="2">结论</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </article>
+        </div>
+    </div>
+</div>
+<div class="g-ft">
+    <footer class="m-footer">
+        <p><a href="https://github.com/regular-ui/index.html" class="footer_logo"><img
+                src="http://regular-ui.github.io/img/logo-v1.0-64.png"></a>
+        </p>
+        <a href="https://github.com/regular-ui/index.html" class="footer_logo"></a>
+
+        <p>
+            <a href="https://github.com/regular-ui/index.html" class="footer_logo"></a>
+            <a href="https://github.com/regular-ui/regular-ui" target="_blank">GitHub</a> |
+            <a href="https://github.com/regular-ui/regular-ui/issues" target="_blank">Issues</a> |
+            <a href="https://github.com/regular-ui/regular-ui/releases" target="_blank">ChangeLog</a> |
+            <a href="https://github.com/regular-ui/regular-ui/blob/master/CONTRIBUTING.md"
+               target="_blank">Contributing</a>
+        </p>
+
+        <p>Licensed under <a href="https://github.com/regular-ui/regular-ui/blob/master/LICENSE" target="_blank">MIT
+            license</a>.</p>
+    </footer>
+</div>
+<script src="/node_modules/requirejs/require.js" data-main="javascript/index.js"></script>
 </body>
-
 </html>
