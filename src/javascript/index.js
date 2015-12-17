@@ -1,14 +1,12 @@
 require.config({
     paths: {
         "text": "/node_modules/text/text",
-        "Regular": "/node_modules/regularjs/dist/regular.min",
+        "Regular": "/node_modules/regularjs/dist/regular",
         "RegularForm": "/node_modules/regular-form/dist/regular-form",
-        "RegularUI": "/node_modules/regular-ui/dist/js/regular-ui",
         "Form": "module/form",
-        "Util": "helper/util",
-        "DatePicker": "component/datePicker"
+        "Util": "helper/util"
     }
 });
-define(['text', 'RegularUI', 'Form'], function (Text, RegularUI, Form) {
+define(['text', 'Form'], function (Text, Form) {
     new Form().$inject('.m-example');
 });
