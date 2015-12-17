@@ -7,6 +7,9 @@ define([], function() {
             }
         return o1;
     };
+    _.copy = function(obj){
+        return JSON.parse(JSON.stringify(obj));
+    };
     _.addEvent = function(elem, type, handler) {
         if (document.addEventListener) {
             elem.addEventListener(type, handler, false);

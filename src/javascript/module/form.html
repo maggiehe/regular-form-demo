@@ -1,0 +1,84 @@
+<form class="m-form">
+    <div class="u-formitem">
+        <label class="formitem_tt">用户名<span class="formitem_rqr">*</span>：</label>
+        <span class="formitem_ct">
+            <label class="u-input2 ">
+                <input type="text" class="u-input" placeholder="" name="username" r-model={formData.username} r-required="true">
+            </label>
+            <span class="u-tip u-tip-error" r-hide={!form.$$username.$error.required}>请输入用户名</span>
+        </span>
+    </div>
+    <div class="u-formitem">
+        <label class="formitem_tt">学历<span class="formitem_rqr">*</span>：</label>
+        <span class="formitem_ct">
+            <select name="education" r-model={formData.education} r-required="true" class="u-select">
+                <option value="">--请选择--</option>
+                <option value="1">高中</option>
+                <option value="2">专科</option>
+                <option value="3">本科</option>
+            </select>
+            <span class="u-tip u-tip-error" r-hide={!form.$$education.$error.required}>请选择学历</span>
+        </span>
+    </div>
+    <div class="u-formitem">
+        <label class="formitem_tt">联系方式<span class="formitem_rqr">*</span>：</label>
+        <span class="formitem_ct">
+            <label class="formitem_tt f-tal"><input type="radio" name="contact" value="0" checked r-model={formData.contact} r-required="true"/> 手机</label>
+            <label class="formitem_tt f-tal"><input type="radio" name="contact" value="1" r-model={formData.contact}/> 邮箱</label>
+        </span>
+    </div>
+
+    {#if formData.contact == 0}
+    <div class="u-formitem">
+        <label class="formitem_tt">手机<span class="formitem_rqr">*</span>：</label>
+        <span class="formitem_ct">
+            <label class="u-input2 ">
+                <input type="tel" class="u-input" placeholder="" maxlength="11" name="phone" r-model={formData.phone} r-required="true" r-pattern={regexp.phone}>
+            </label>
+            <span class="u-tip u-tip-error" r-hide={!form.$$phone.$error.required}>请输入手机</span>
+            <span class="u-tip u-tip-error" r-hide={!form.$$phone.$error.pattern}>手机格式不正确</span>
+        </span>
+    </div>
+    {#else}
+    <div class="u-formitem">
+        <label class="formitem_tt">邮箱<span class="formitem_rqr">*</span>：</label>
+        <span class="formitem_ct">
+            <label class="u-input2 ">
+                <input type="text" class="u-input" placeholder="" name="email" r-model={formData.email} r-required="true" r-type="email">
+            </label>
+            <span class="u-tip u-tip-error" r-hide={!form.$$email.$error.required}>请输入邮箱</span>
+            <span class="u-tip u-tip-error" r-hide={!form.$$email.$error.type}>邮箱格式不正确</span>
+        </span>
+    </div>
+    {/if}
+    <div class="u-formitem">
+        <label class="formitem_tt">个人简介<span class="formitem_rqr">*</span>：</label>
+        <span class="formitem_ct">
+            <label class="u-input2 ">
+                <textarea class="u-textarea" placeholder="" name="resume" r-model={formData.resume} r-required="true"></textarea>
+            </label>
+            <span class="u-tip u-tip-error" r-hide={!form.$$resume.$error.required}>请输入个人简介</span>
+        </span>
+    </div>
+    <div class="u-formitem">
+        <label class="formitem_tt">验证码<span class="formitem_rqr">*</span>：</label>
+        <span class="formitem_ct">
+            <label class="u-input2 ">
+                <input type="text" class="u-input" placeholder="" name="vccode" r-model={formData.vccode} r-required="true" r-extend={this.checkVCCode}>
+            </label>
+            <img src="http://regular-ui.github.io/img/verifyCode.jpg">
+            <span class="u-tip u-tip-error" r-hide={!form.$$vccode.$error.required}>请输入验证码</span>
+            <span class="u-tip u-tip-error" r-hide={!form.$$vccode.$error.extend}>验证码不正确</span>
+        </span>
+    </div>
+
+    <div class="u-formitem">
+        <label class="formitem_ct"><input type="checkbox" checked name="agree" r-model={formData.agree} r-required="true"> 同意“服务条款”和“隐私权保护和个人信息利用政策”</label>
+    </div>
+    <div class="u-formitem">
+        <span class="formitem_ct">
+            <a  class="u-btn" r-class={{'u-btn-disable': !$dirty}} on-click={this.reset()}>重置</a >
+            <a class="u-btn u-btn-primary" r-class={{'u-btn-disable': $invalid}}>立即注册</a>
+        </span>
+    </div>
+</form>
